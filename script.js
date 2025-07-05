@@ -13,16 +13,15 @@ function appendAlert2(message, type) {
 
 // Función principal al hacer click
 document.getElementById('liveAlertBtn2').addEventListener('click', () => {
-  // 1. Obtener valor actual del input
+  // Obtener valor actual del input
   const cadena = document.getElementById("inputPassword2").value;
-  
 
-  //  Convertir a array de números
-  const digitos = cadena.split('');
+  //Convertir a array de números
+  const digitos = cadena.split('').map(Number);
   
-  // Ordenar en ambos sentidos
-  const mayorAMenor = digitos.sort((a, b) => b - a);
-  const menorAMayor = digitos.sort((a, b) => a - b);
+  //Ordenar en ambos sentidos
+  const mayorAMenor = [...digitos].sort((a, b) => b - a);
+  const menorAMayor = [...digitos].sort((a, b) => a - b);
   
   // Mostrar resultados
   appendAlert2({
