@@ -18,11 +18,11 @@ document.getElementById('liveAlertBtn2').addEventListener('click', () => {
   
 
   //  Convertir a array de números
-  const digitos = cadena.split('').map(Number);
+  const digitos = cadena.split('');
   
   // Ordenar en ambos sentidos
-  const mayorAMenor = [...digitos].sort((a, b) => b - a);
-  const menorAMayor = [...digitos].sort((a, b) => a - b);
+  const mayorAMenor = digitos.sort((a, b) => b - a);
+  const menorAMayor = digitos.sort((a, b) => a - b);
   
   // Mostrar resultados
   appendAlert2({
